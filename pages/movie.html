@@ -22,6 +22,8 @@
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
         </div>
         <ul tabindex="0" class="menu backdrop-blur-3xl menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <li><button class="link-secondary" onclick="sign_in.showModal()">Sign In</button></li>
+          <li><button class="link-primary" onclick="my_modal_5.showModal()">Sign Up</button></li>
           <li><a href="../index.html">Homepage</a></li>
           <li><a>Portfolio</a></li>
           <li><a>About</a></li>
@@ -31,8 +33,8 @@
     <div class="navbar-center">
       <img class="w-32" src="../images/logo.png" alt="">
     </div>
-    <div class="navbar-end gap-10">
-      <button class="btn btn-primary" onclick="my_modal_5.showModal()">Sign Up</button>
+    <div class="navbar-end">
+      
       <dialog id="my_modal_5" class="backdrop-blur-md modal modal-bottom sm:modal-middle">
         <div class="modal-box">
           <h3 class="font-bold text-lg text-center">Personal Profile | Sign Up</h3>
@@ -105,7 +107,6 @@
         </div>
       </dialog>
 
-      <button class="btn link-secondary" onclick="sign_in.showModal()">Sign In</button>
       <dialog id="sign_in" class="modal backdrop-blur-md modal-bottom sm:modal-middle">
         <div class="modal-box">
           <h3 class="font-bold text-center text-lg">Login</h3>
