@@ -32,7 +32,93 @@
     <div class="navbar-center">
       <a class="btn btn-ghost text-xl">Tetflix</a>
     </div>
-    <div class="navbar-end">
+    <div class="navbar-end gap-5">
+      <button class="btn btn-primary" onclick="my_modal_5.showModal()">Sign Up</button>
+      <dialog id="my_modal_5" class="backdrop-blur-md modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <h3 class="font-bold text-lg">Personal Profile | Sign Up</h3>
+          <p class="py-4">If you already have an account with us, please login.</p>
+          <div class="modal-action">
+            <form class="flex flex-col w-full gap-5" method="dialog">
+              <div class="flex flex-col gap-5">
+                <label class="input input-bordered flex items-center gap-2">
+                  First Name <input type="text" class="grow" placeholder="Juan" />
+                </label>
+
+                <label class="input input-bordered flex items-center gap-2">
+                  Middle Name <input type="text" class="grow" placeholder="Masipag" />
+                </label>
+
+                <label class="input input-bordered flex items-center gap-2">
+                  Last Name <input type="text" class="grow" placeholder="Tamad" />
+                </label>
+
+                <label class="input input-bordered flex items-center gap-2">
+                  E-Mail <input type="email" class="grow" placeholder="juantamad@gmail.com" />
+                </label>
+
+                <label class="input input-bordered flex items-center gap-2">
+                  Age <input type="number" class="grow" placeholder="100" />
+                </label>
+
+                <label class="input input-bordered flex items-center gap-2">
+                  Password <input minlength="8" type="password" class="grow" placeholder="********" />
+                </label>
+              </div>
+
+              <div class="flex flex-row justify-between items-center">
+                <p>Age: </p>
+                <label class="flex flex-row items-center gap-3">
+                  <input type="radio" name="radio-1" class="radio" checked /> Under 18
+                </label>
+                
+                <label class="flex flex-row items-center gap-3">
+                  <input type="radio" name="radio-1" class="radio" /> 19-30
+                </label>
+                
+                <label class="flex flex-row items-center gap-3">
+                  <input type="radio" name="radio-1" class="radio" /> 31-40
+                </label>
+                
+                <label class="flex flex-row items-center gap-3">
+                  <input type="radio" name="radio-1" class="radio" /> Over 41
+                </label>
+              </div>
+
+              <div>
+                <label>Gender
+                  <select required class="select select-primary w-full max-w-xs">
+                    <option disabled selected>Select one</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                  </select>
+                </label>
+              </div>
+
+              <div>
+                <textarea class="textarea w-full textarea-bordered" placeholder="Bio"></textarea>
+              </div>
+              <button class="btn btn-primary">Sign Me Up!</button>
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+
+      <button class="btn link-secondary" onclick="sign_in.showModal()">Sign In</button>
+      <dialog id="sign_in" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <h3 class="font-bold text-lg">Hello!</h3>
+          <p class="py-4">Press ESC key or click the button below to close</p>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
       <label class="swap swap-rotate">
   
         <input type="checkbox" class="theme-controller" value="synthwave" />
@@ -47,7 +133,7 @@
   
   <div class="hero min-h-screen bg-base-200">
     <div class="hero-content flex-col lg:flex-row-reverse">
-      <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS3hk4Xa0H5jesVMHVoN5T8ryQVYhJ_u1qpya0-bLtXtGefCbnx" class="max-w-sm rounded-lg shadow-2xl" />
+      <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS3hk4Xa0H5jesVMHVoN5T8ryQVYhJ_u1qpya0-bLtXtGefCbnx" class="max-w-sm rounded-lg shadow-2xl hover:scale-105 transition-transform duration-200" />
       <div>
         <h1 class="text-5xl font-bold">Doctor Strange</h1>
         <p class="py-6">Doctor Strange is a 2016 American superhero film based on the Marvel Comics character of the same name. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it is the 14th film in the Marvel Cinematic Universe (MCU). The film was directed by Scott Derrickson and stars Benedict Cumberbatch as neurosurgeon Dr. Stephen Strange along with a star-studded cast. After a horrific car accident, Strange embarks on a journey of healing where he encounters the Ancient One and learns about the mystic arts.</p>
@@ -58,7 +144,7 @@
   
   <div class="hero min-h-screen bg-base-200">
     <div class="hero-content flex-col lg:flex-row">
-      <img src="./../images/movies/endgame.jpg" class="max-w-sm rounded-lg shadow-2xl" />
+      <img src="./../images/movies/endgame.jpg" class="max-w-sm rounded-lg shadow-2xl hover:scale-105 transition-transform duration-200" />
       <div>
         <h1 class="text-5xl font-bold">Avengers Endgame</h1>
         <p class="py-6">Avengers: Endgame is a 2019 American superhero film based on the Marvel Comics superhero team the Avengers. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it is the direct sequel to Avengers: Infinity War (2018) and the 22nd film in the Marvel Cinematic Universe (MCU). The film features an ensemble cast including Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth, Scarlett Johansson, Jeremy Renner, and others. The Avengers join forces with allies to reverse the damage caused by Thanos in Infinity War.</p>
@@ -69,7 +155,7 @@
   
   <div class="hero min-h-screen bg-base-200">
     <div class="hero-content flex-col lg:flex-row-reverse">
-      <img src="./../images/movies/infinity_war.jpg" class="max-w-sm rounded-lg shadow-2xl" />
+      <img src="./../images/movies/infinity_war.jpg" class="max-w-sm rounded-lg shadow-2xl hover:scale-105 transition-transform duration-200" />
       <div>
         <h1 class="text-5xl font-bold">Avengers Infinity War</h1>
         <p class="py-6">Avengers: Infinity War is a 2018 American superhero film based on the Marvel Comics superhero team the Avengers. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it is the sequel to 2012's The Avengers and 2015's Avengers: Age of Ultron, and the 19th film in the Marvel Cinematic Universe (MCU). The film features an ensemble cast including Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth, Scarlett Johansson, and others. The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.</p>
@@ -80,7 +166,7 @@
 
   <div class="hero min-h-screen bg-base-200">
     <div class="hero-content flex-col lg:flex-row">
-      <img src="./../images/movies/eras-tour.jpg" class="max-w-sm rounded-lg shadow-2xl" />
+      <img src="./../images/movies/eras-tour.jpg" class="max-w-sm rounded-lg shadow-2xl hover:scale-105 transition-transform duration-200" />
       <div>
         <h1 class="text-5xl font-bold">Taylor Swift's Eras Tour</h1>
         <p class="py-6">Taylor Swift's Eras Tour is a captivating musical journey that showcases the evolution of Swift's music across different eras. This concert film features performances of her greatest hits, behind-the-scenes footage, and exclusive interviews, providing an intimate look at the iconic artist's creative process.</p>
@@ -91,7 +177,7 @@
 
   <div class="hero min-h-screen bg-base-200">
     <div class="hero-content flex-col lg:flex-row-reverse">
-      <img src="./../images/movies/snowdrop.jpg" class="max-w-sm rounded-lg shadow-2xl" />
+      <img src="./../images/movies/snowdrop.jpg" class="max-w-sm rounded-lg shadow-2xl hover:scale-105 transition-transform duration-200" />
       <div>
         <h1 class="text-5xl font-bold">Snowdrop</h1>
         <p class="py-6">Snowdrop is a South Korean television series that takes place in 1987. It tells the love story of a student at a prestigious university who, against all odds, falls for a North Korean spy. The drama is filled with suspense, romance, and historical context, making it a must-watch for K-drama fans.</p>
@@ -102,7 +188,7 @@
 
   <div class="hero min-h-screen bg-base-200">
     <div class="hero-content flex-col lg:flex-row">
-      <img src="./../images/movies/bigmouth.jpg" class="max-w-sm rounded-lg shadow-2xl" />
+      <img src="./../images/movies/bigmouth.jpg" class="max-w-sm rounded-lg shadow-2xl hover:scale-105 transition-transform duration-200" />
       <div>
         <h1 class="text-5xl font-bold">Bigmouth</h1>
         <p class="py-6">Bigmouth is a thrilling South Korean crime drama series. The story revolves around a seemingly ordinary high school teacher who becomes entangled in the underworld of organized crime. This gripping series is filled with unexpected twists and turns, making it a must-watch for fans of intense, character-driven narratives.</p>
@@ -113,7 +199,7 @@
 
   <div class="hero min-h-screen bg-base-200">
     <div class="hero-content flex-col lg:flex-row-reverse">
-      <img src="./../images/movies/impossible-heir.jpg" class="max-w-sm rounded-lg shadow-2xl" />
+      <img src="./../images/movies/impossible-heir.jpg" class="max-w-sm rounded-lg shadow-2xl hover:scale-105 transition-transform duration-200" />
       <div>
         <h1 class="text-5xl font-bold">Impossible Heir</h1>
         <p class="py-6">Impossible Heir is a riveting South Korean drama that revolves around a young heir who is forced to take over a large corporation at a young age. The series explores his struggles and triumphs as he navigates the complex world of business, power, and family ties. With its compelling storyline and well-developed characters, Impossible Heir is a must-watch for fans of corporate dramas.</p>
@@ -124,7 +210,7 @@
 
   <div class="hero min-h-screen bg-base-200">
     <div class="hero-content flex-col lg:flex-row">
-      <img src="./../images/movies/my-man-is-cupid.jpg" class="max-w-sm rounded-lg shadow-2xl" />
+      <img src="./../images/movies/my-man-is-cupid.jpg" class="max-w-sm rounded-lg shadow-2xl hover:scale-105 transition-transform duration-200" />
       <div>
         <h1 class="text-5xl font-bold">My Man is Cupid</h1>
         <p class="py-6">My Man is Cupid is a romantic comedy series that tells the story of a man who becomes a cupid for others, but struggles to find his own love. This series is filled with humor, heartwarming moments, and the complexities of modern relationships, making it a must-watch for fans of romantic comedies.</p>
@@ -135,7 +221,7 @@
 
   <div class="hero min-h-screen bg-base-200">
     <div class="hero-content flex-col lg:flex-row-reverse">
-      <img src="./../images/movies/a-shop-for-killera.jpg" class="max-w-sm rounded-lg shadow-2xl" />
+      <img src="./../images/movies/a-shop-for-killera.jpg" class="max-w-sm rounded-lg shadow-2xl hover:scale-105 transition-transform duration-200" />
       <div>
         <h1 class="text-5xl font-bold">A Shop for Killers</h1>
         <p class="py-6">A Shop for Killers is a gripping South Korean crime thriller series. The story revolves around a mysterious shop that provides tools and resources for professional killers. As the police start to close in on the shop's operations, tensions rise and the line between right and wrong becomes increasingly blurred. This series is a must-watch for fans of suspenseful, action-packed dramas.</p>
@@ -146,7 +232,7 @@
 
   <div class="hero min-h-screen bg-base-200">
     <div class="hero-content flex-col lg:flex-row">
-      <img src="./../images/movies/family-guy.jpg" class="max-w-sm rounded-lg shadow-2xl hover:scale-110 transition-transform duration-200" />
+      <img src="./../images/movies/family-guy.jpg" class="max-w-sm rounded-lg shadow-2xl hover:scale-105 transition-transform duration-200" />
       <div>
         <h1 class="text-5xl font-bold">Family Guy</h1>
         <p class="py-6">Family Guy is an American animated sitcom created by Seth MacFarlane for the Fox Broadcasting Company. The series centers on the Griffins, a family consisting of parents Peter and Lois; their children, Meg, Chris, and Stewie; and their anthropomorphic pet dog, Brian. The show is set in the fictional city of Quahog, Rhode Island, and exhibits much of its humor in the form of metafictional cutaway gags that often lampoon American culture.</p>
@@ -158,7 +244,7 @@
 
   <div class="hero min-h-screen bg-base-200">
     <div class="hero-content flex-col lg:flex-row-reverse">
-      <img src="./../images/movies/wakanda-forever.jpg" class="max-w-sm rounded-lg shadow-2xl" />
+      <img src="./../images/movies/wakanda-forever.jpg" class="max-w-sm rounded-lg shadow-2xl hover:scale-105 transition-transform duration-200" />
       <div>
         <h1 class="text-5xl font-bold">Wakanda Forever</h1>
         <p class="py-6">Wakanda Forever is an upcoming American superhero film based on the Marvel Comics character Black Panther. The film is a sequel to 2018's Black Panther and is part of Phase Four of the Marvel Cinematic Universe.</p>
@@ -169,7 +255,7 @@
 
   <div class="hero min-h-screen bg-base-200">
     <div class="hero-content flex-col lg:flex-row">
-      <img src="./../images/movies/black-panther.jpg" class="max-w-sm rounded-lg shadow-2xl" />
+      <img src="./../images/movies/black-panther.jpg" class="max-w-sm rounded-lg shadow-2xl hover:scale-105 transition-transform duration-200" />
       <div>
         <h1 class="text-5xl font-bold">Black Panther</h1>
         <p class="py-6">Black Panther is a 2018 American superhero film based on the Marvel Comics character of the same name. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it is the 18th film in the Marvel Cinematic Universe (MCU).</p>
@@ -180,7 +266,7 @@
 
   <div class="hero min-h-screen bg-base-200">
     <div class="hero-content flex-col lg:flex-row-reverse">
-      <img src="./../images/movies/captain-marvel.jpg" class="max-w-sm rounded-lg shadow-2xl" />
+      <img src="./../images/movies/captain-marvel.jpg" class="max-w-sm rounded-lg shadow-2xl hover:scale-105 transition-transform duration-200" />
       <div>
         <h1 class="text-5xl font-bold">Captain Marvel</h1>
         <p class="py-6">Captain Marvel is a 2019 American superhero film based on the Marvel Comics character of the same name. Produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures, it is the 21st film in the Marvel Cinematic Universe (MCU).</p>
@@ -191,7 +277,7 @@
 
   <div class="hero min-h-screen bg-base-200">
     <div class="hero-content flex-col lg:flex-row">
-      <img src="./../images/movies/civil-war.jpg" class="max-w-sm rounded-lg shadow-2xl" />
+      <img src="./../images/movies/civil-war.jpg" class="max-w-sm rounded-lg shadow-2xl hover:scale-105 transition-transform duration-200" />
       <div>
         <h1 class="text-5xl font-bold">Civil War</h1>
         <p class="py-6">Civil War is a 2016 American superhero film based on the Marvel Comics character Captain America. It's the 13th film in the Marvel Cinematic Universe (MCU).</p>
@@ -202,7 +288,7 @@
 
   <div class="hero min-h-screen bg-base-200">
     <div class="hero-content flex-col lg:flex-row-reverse">
-      <img src="./../images/movies/multiverse-of-madness.jpg" class="max-w-sm rounded-lg shadow-2xl" />
+      <img src="./../images/movies/multiverse-of-madness.jpg" class="max-w-sm rounded-lg shadow-2xl hover:scale-105 transition-transform duration-200" />
       <div>
         <h1 class="text-5xl font-bold">Doctor Strange: Multiverse of Madness</h1>
         <p class="py-6">Doctor Strange in the Multiverse of Madness is an upcoming American superhero film based on the Marvel Comics character Doctor Strange. The film is a sequel to 2016's Doctor Strange and 2021's Spider-Man: No Way Home and is part of Phase Four of the Marvel Cinematic Universe.</p>
